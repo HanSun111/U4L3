@@ -29,8 +29,14 @@ public class WhileLoopFun
      Example:  If number is 361, this methods prints 1, then 6, then 3
      Example:  If number is 150856, this methods prints 6, then 5, then 8, then 0, then 5, then 1
      */
-    /*public void printDigits(int number)
+    public void printDigits(int number)
     {
+        String reverse = Integer.toString(number);
+        int l = reverse.length();
+        while(l > 0){
+
+        }
+        System.out.println();
     }
 
     /**Returns the sum of the digits in number.
