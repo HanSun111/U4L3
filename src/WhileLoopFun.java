@@ -35,18 +35,27 @@ public class WhileLoopFun
         int l = reverse.length();
         while(l > 0){
 
+            System.out.println(reverse.substring(l-1, l));
+            l--;
         }
-        System.out.println();
     }
 
     /**Returns the sum of the digits in number.
      Example:  If number is 361, this methods returns 3 + 6 + 1 = 10
      Example:  If number is 150856, this methods returns 1 + 5 + 0 + 8 + 5 + 6 = 25
      */
-    /*public int sumOfDigits(int number)
+    public int sumOfDigits(int number)
     {
+        String num = Integer.toString(number);
+        int add = num.length();
+        int sum = 0;
+        while(add > 0){
+            sum = sum + (Integer.valueOf(num.substring(add-1, add)));
+            add --;
+        }
+        return sum;
     }
-*/
+
 
     /**Returns true if number is prime (i.e. it has exactly two divisors: 1 and itself) and false
      if it is not prime (i.e. it has at least one other divisor); however, if number is 1, return false, as 1 is
@@ -60,8 +69,9 @@ public class WhileLoopFun
      * 1 is considered non-prime because prime numbers have exactly two divisors - the number and itself -
      but 1 has only a single divisor! (don’t believe it? Google it!)
      */
-    /*public boolean isPrime(int number)
+    public boolean isPrime(int number)
     {
+        if(number % 2 == 1 )
     }
 
     /**Returns the maximum number of times that number can be doubled (multiplied by 2) before it exceeds
